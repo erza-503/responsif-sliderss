@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+
+  /* Variables for storing colors */
+  --card-clr: #4F9CF9;
+  --card-active-clr: #ffffff; /* Background putih untuk card aktif */
+  --body-clr: #fff;
+  --primary-clr: #4F9CF9;
+  --heading-clr: #ffffff;
+  --heading-active-clr: #000000; /* Warna hitam untuk teks pada card aktif */
+  --text-clr: #ffffff;
+  --text-active-clr: #000000; /* Warna hitam untuk teks pada card aktif */
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--body-clr);
+}
+.testimonials-section {
+  width: 100%;
+  padding: 0px 8%;
+}
+.testimonials-section .section-header {
+  max-width: 700px;
+  text-align: center;
+  margin: 30px auto 40px;
+}
+.section-header h1 {
+  position: relative;
+  font-size: 36px;
+  color: rgb(0, 0, 0);
+}
+.testimonials-container {
+  position: relative;
+}
+.testimonials-container .testimonial-card {
+  padding: 20px;
+  background-color: var(--card-clr);
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.testimonial-card .test-card-body {
+  background-color: var(--card-clr);
+  padding: 20px;
+}
+.test-card-body .quote {
+  display: flex;
+  align-items: center;
+}
+.test-card-body .quote i {
+  font-size: 45px;
+  color: var(--heading-clr);
+  margin-right: 20px;
+  transition: color 0.3s;
+}
+.test-card-body .quote h2 {
+  color: var(--heading-clr);
+}
+.test-card-body p {
+  margin: 10px 0px 15px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-clr);
+  transition: color 0.3s;
+}
+.test-card-body .ratings {
+  margin-top: 20px;
+}
+.test-card-body .ratings i {
+  font-size: 17px;
+  color: var(--primary-clr);
+  cursor: pointer;
+}
+.testimonial-card .profile {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  background-color: var(--card-clr);
+  transition: background-color 0.3s, color 0.3s;
+}
+.profile .profile-image {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+.profile .profile-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.profile .profile-desc {
+  display: flex;
+  flex-direction: column;
+}
+.profile-desc span:nth-child(1) {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+.profile-desc span:nth-child(2) {
+  font-size: 15px;
+  color: var(--text-clr);
+}
+
+.owl-prev i,
+.owl-next i {
+  padding: 10px !important;
+  border-radius: 50%;
+  font-size: 18px !important;
+  background-color: white !important;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.owl-prev i:hover,
+.owl-next i:hover {
+  background-color: white !important;
+  color: #e9e9e9;
+}
+.owl-dots {
+  margin-top: 15px;
+}
+.owl-dots .owl-dot span {
+  background-color: #434753 !important;
+  padding: 6px !important;
+}
+.owl-dot.active span {
+  background-color: var(--primary-clr) !important;
+}
+
+/* Styles for active card */
+.testimonial-card.active {
+  background-color: var(--card-active-clr);
+}
+.testimonial-card.active .test-card-body {
+  background-color: var(--card-active-clr);
+}
+.testimonial-card.active .test-card-body .quote i {
+  color: var(--primary-clr); /* Warna biru untuk quote.svg */
+}
+.testimonial-card.active .test-card-body p {
+  color: var(--text-active-clr); /* Warna hitam untuk teks */
+}
+.testimonial-card.active .profile {
+  background-color: var(--card-active-clr);
+}
+.testimonial-card.active .profile-desc span:nth-child(1) {
+  color: var(--heading-active-clr); /* Warna hitam untuk nama */
+}
+.testimonial-card.active .profile-desc span:nth-child(2) {
+  color: var(--text-active-clr); /* Warna hitam untuk deskripsi */
+}
